@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import Profile from './Profile';
+import Profile from '../components/Profile';
 
 describe('<Profile/>', () => {
     it('matches snapshot',() => {
