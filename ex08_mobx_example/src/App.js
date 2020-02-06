@@ -2,15 +2,14 @@ import React from 'react';
 import './App.css';
 import Counter from './Components/Counter';
 import SuperMarket from './Components/SuperMarket';
-import DevTools from 'mobx-react-devtools';
 
 function App() {
+	console.log(process.env.NODE_ENV);
 	return (
 		<div>
 			<Counter />
 			<hr />
 			<SuperMarket />
-			{/* {process.env.NODE_ENV === 'development' && <DevTools />} */}
 		</div>
 	);
 }
