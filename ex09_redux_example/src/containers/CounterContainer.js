@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Counter from '../components/Counter';
-import { bindActionCreators } from 'redux';
 import { increment, decrement } from '../store/modules/counter';
+//import { bindActionCreators } from 'redux';
 
 class CounterContainer extends Component {
   handleIncrement = () => {
