@@ -1,15 +1,15 @@
 import React from 'react';
-import Main from './View/Main/Main';
 import { Layout } from 'antd';
 import 'antd/dist/antd.css';
 import Header from './View/Header/Header';
+import TestResult from './View/Main/Testresult';
 
 function App() {
 	return (
 		<div className='App'>
 			<Layout style={{ minHeight: '100vh' }}>
 				<Header />
-				<Main />
+				<TestResult />
 			</Layout>
 		</div>
 	);

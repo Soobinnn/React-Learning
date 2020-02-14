@@ -113,7 +113,6 @@ class Main extends React.Component {
 								<BarChart data={this.state.data[2].data} title={this.state.data[2].title} color='#B08EA2' />
 							</TabPane>
 						</Tabs>
-						<Board />
 					</Content>
 				</Layout>
 			</Layout>
