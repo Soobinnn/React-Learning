@@ -4,7 +4,7 @@
 
 ```
 yarn create react-app enzyme
-# 혹은 npm create-react-app enzyme
+# 혹은 npx create-react-app enzyme
 ```
 
 2. 설치

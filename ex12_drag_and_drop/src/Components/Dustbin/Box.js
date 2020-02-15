@@ -15,6 +15,7 @@ const Box = ({ name }) => {
 		item: { name, type: ItemTypes.BOX },
 		end: (item, monitor) => {
 			const dropResult = monitor.getDropResult();
+			console.log('[dropResult]', dropResult);
 			if (item && dropResult) {
 				alert(`You dropped ${item.name} into ${dropResult.name}!`);
 			}
@@ -23,7 +24,9 @@ const Box = ({ name }) => {
 			isDragging: monitor.isDragging()
 		})
 	});
+	
 	const opacity = isDragging ? 0.4 : 1;
+
 	return (
 		<div ref={drag} style={{ ...style, opacity }}>
 			{name}

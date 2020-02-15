@@ -1,3 +1,6 @@
 export default {
-	BOX: 'box'
+	BOX: 'box',
+	FOOD: 'food',
+	GLASS: 'glass',
+	PAPER: 'paper',
 };

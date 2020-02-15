@@ -70,6 +70,11 @@ const [{ isDragging }, drag] = useDrag({
 });
 ```
 
+- isDragging(monitor)
+
+	드래그 작업을 한 드래그 소스만 드래그한 것을 간주함.
+
+
 - item (필수) 드래그되는 데이터를 설명하는 js객체. 드래그 소스에 대한 유일 정보이므로 알아야할 최소한의 데이터를 선택하는 것이 중요함. {id, type} 권장
 
 - end(item, monitor) (선택)
@@ -84,7 +89,8 @@ const [{ isDragging }, drag] = useDrag({
 
   수집 기능.
 
-* previewOptions
+
+- previewOptions
 
 #### useDrag
 
@@ -109,4 +115,8 @@ const [{ canDrop, isOver }, drop] = useDrop({
 });
 ```
 
+- canDrop(item, monitor) 
+	: 놓기 대상이 항목을 승인할 수 있는지 여부를 지정
+
 - drop(item,monitor) (선택)
+
