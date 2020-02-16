@@ -31,14 +31,13 @@ export const Panel = ({ id, left, top, children }) => {
   </div>
   }
   return (
-    preview(
-    <div style={{ ...style, left, top }}>
+    <div ref={preview} style={{ ...style, left, top }}>
       {drag(<div style={{...handleStyle}} />)}
-      <div>
+      <div >
       <LineGraph/>
       </div>
     </div>
-    ))
+    )
 };
 
 export const PanelHandle = DragSource(

@@ -7,6 +7,7 @@ import MultiTarget from './Components/Dustbin/MutiTarget';
 import Naive from './Components/DragAround/Naive';
 import Container from './Components/ChainConnector/Container';
 import DragContainer from './Components/Example/DragContainer';
+import SortableContainer from './Components/Sortable/SortableContainer';
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 				<MultiTarget/>
 				<Naive/>
 				<Container/>
+				<SortableContainer/>
 				<DragContainer/>
 			</DndProvider>
 		</div>
