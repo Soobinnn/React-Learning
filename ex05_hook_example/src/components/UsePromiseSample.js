@@ -5,6 +5,7 @@ const wait = () => {
 	// 3초 후에 끝나는 프로미스를 반환
 	return new Promise(resolve => setTimeout(() => resolve('Hello hooks!'), 3000));
 };
+
 const UsePromiseSample = () => {
 	const [loading, resolved, error] = usePromise(wait, []);
 
