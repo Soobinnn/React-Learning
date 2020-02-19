@@ -29,8 +29,15 @@ const data = [
   },
 ];
 
+const test = (page, pageSize) => {
+  console.log(page, pageSize)
+}
+const tests = (current, size) => {
+  console.log(current, size);
+}
+const pagenation = {pageSizeOptions: ['1','30', '40'],defaultPageSize:1,onChange(page, pageSize){test(page, pageSize)},total:100,onShowSizeChange(current, size){tests(current, size)}, showSizeChanger: true};
 
- 
+
 const TableSearch = () => {
   const [state, onState] = useState({
     searchText:'',
@@ -120,7 +127,7 @@ const TableSearch = () => {
     },
   ];
 
-    return (<Table columns={columns} dataSource={data} />);
+    return (<Table columns={columns} dataSource={data} pagination= {{...pagenation}} />);
 }
 
 
