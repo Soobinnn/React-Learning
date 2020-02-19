@@ -117,7 +117,6 @@ const TableSearch = () => {
       title: 'Address',
       dataIndex: 'address',
       key: 'address',
-      ...getColumnSearchProps('address'),
     },
   ];
 
