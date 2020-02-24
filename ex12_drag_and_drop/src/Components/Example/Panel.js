@@ -6,8 +6,8 @@ import LineGraph from './LineGraph';
 const style = {
   position: 'absolute',
   border: '1px solid gray',
-  width: 500,
-  height : 300,
+  width: 700,
+  height : 500,
   backgroundColor: 'white',
 };
 
