@@ -4,6 +4,9 @@ import './App.css';
 import CounterContainer from './containers/CounterContainer';
 import PaletteContainer from './containers/PaletteContainer';
 import WaitingListContainer from './containers/WaitingListContainer';
+import ImmuPaletteContainer from './containers/ImmuPaletteContainer';
+import ImmuCounterContainer from './containers/ImmuCounterContainer';
+import ImmuWaitingListContainer from './containers/ImmuWaitingListContainer';
 
 class App extends Component {
   render() {
@@ -12,6 +15,10 @@ class App extends Component {
         <PaletteContainer />
         <CounterContainer />
         <WaitingListContainer />
+
+        <ImmuPaletteContainer />
+        <ImmuCounterContainer />
+        <ImmuWaitingListContainer />
       </div>
     );
   }

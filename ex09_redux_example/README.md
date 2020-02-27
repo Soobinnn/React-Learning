@@ -9,7 +9,7 @@ yarn add redux react-redux redux-action
 2. Module 생성
 
 - 액션 타입 정의
-- 액션 생섬함수 정의
+- 액션 생성함수 정의
 - 초기상태와 리듀서 정의
 
 3. combineReducers로 루트 리듀서 생성
@@ -171,13 +171,19 @@ CREATE, ENTER, LEAVE의 액션 경우엔 배열을 다뤄야 하는 것들이라
 
 ### Immer
 
-불변성을 유지해줘야 하는 객체의 값을 더 쉽게 업데이트 할 수 있게 해줍니다.
+불변성을 유지해줘야 하는 객체의 값을 더 쉽게 업데이트 할 수 있게 해줌.
 
 #### Install
 
 ```
 yarn add immutable
 ```
+
+#### 설명
+
+Immutable 을 사용하면 업데이트를 하게 될 때 위와 같이 내장 함수들을 활용하여 간단하게 할 수 있는 대신에,
+
+값이 일반 객체가 아니기 때문에 상태에서 값을 조회하고 싶을 때 counter.color 이런식으로는 값을 조회하지 못하고 counter.get('color') 해야함.
 
 # 참고 문서
 
