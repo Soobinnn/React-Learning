@@ -4,36 +4,48 @@ import Card from './Card'
 import update from 'react-addons-update'
 import ItemTypes from './ItemTypes'
 const style = {
-  width: 400,
+  width: 1000,
+  border : '1px solid black',
+  display: 'flex',
+  justifyContent: 'space-around',
+  flexWrap: 'wrap',
+
 }
 const ITEMS = [
   {
     id: 1,
-    text: 'Write a cool JS library',
+    name: 'Write a cool JS library',
+    width: 100,
   },
   {
     id: 2,
-    text: 'Make it generic enough',
+    name: 'Make it generic enough',
+    width: 400,
   },
   {
     id: 3,
-    text: 'Write README',
+    name: 'Write README',
+    width: 200,
   },
   {
     id: 4,
-    text: 'Create some examples',
+    name: 'Create some examples',
+    width: 300,
   },
   {
     id: 5,
-    text: 'Spam in Twitter and IRC to promote it',
+    name: 'Spam in Twitter and IRC to promote it',
+    width: 200,
   },
   {
     id: 6,
-    text: '???',
+    name: '???',
+    width: 100,
   },
   {
     id: 7,
-    text: 'PROFIT',
+    name: 'PROFIT',
+    width: 100,
   },
 ]
 const SortableContainer = () => {
@@ -64,7 +76,8 @@ const SortableContainer = () => {
           <Card
             key={card.id}
             id={`${card.id}`}
-            text={card.text}
+            name={card.name}
+            width={card.width}
             moveCard={moveCard}
             findCard={findCard}
           />
