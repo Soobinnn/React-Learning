@@ -1,11 +1,13 @@
 import React from 'react';
-import VerticalList from './example/vertical/VerticalList';
 import './App.css';
+import ExampleLayout from './example/react-grid-layout/ExampleLayout';
+
 
 function App() {
   return (
     <div className="App">
-      <VerticalList/>
+      {/* <VerticalList/> */}
+      <ExampleLayout/>
     </div>
   );
 }
