@@ -3,6 +3,7 @@ import TodoListTemplate from './components/ToDoListTemplate';
 import './App.css';
 import Form from './components/Form';
 import ToDoItemList from './components/ToDoItemList';
+import HooksTodoList from './components/hooks/HooksTodoList';
 
 class App extends React.Component {
 
@@ -96,9 +97,12 @@ class App extends React.Component {
     } = this;
   
     return(
-    <TodoListTemplate form={(<Form value={input} onKeyPress={handleKeyPress} onChange={handleChange} onCreate={handleCreate}/>)}>
-      <ToDoItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove}/>
-    </TodoListTemplate>
+      <div>
+        <TodoListTemplate form={(<Form value={input} onKeyPress={handleKeyPress} onChange={handleChange} onCreate={handleCreate}/>)}>
+          <ToDoItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove}/>
+        </TodoListTemplate>
+        <HooksTodoList/>
+      </div>
     );
   }
 }
