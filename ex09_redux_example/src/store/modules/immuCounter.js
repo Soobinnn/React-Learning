@@ -1,16 +1,16 @@
 import { Map } from 'immutable';
 
 // 액션 타입 정의
-const CHANGE_COLOR = 'counter/CHANGE_COLOR';
-const INCREMENT = 'counter/INCREMENT';
-const DECREMENT = 'counter/DECREMENT';
+const CHANGE_COLOR = 'immuCounter/CHANGE_COLOR';
+const INCREMENT = 'immuCounter/INCREMENT';
+const DECREMENT = 'immuCounter/DECREMENT';
 
-// 액션 생성함수 정의
+// 액션 생섬함수 정의
 export const changeColor = color => ({ type: CHANGE_COLOR, color });
 export const increment = () => ({ type: INCREMENT });
 export const decrement = () => ({ type: DECREMENT });
 
-// Immutable의 Map으로 감싸기
+// **** Immutable 의 Map 으로 감싸기
 const initialState = Map({
   color: 'red',
   number: 0,

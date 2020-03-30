@@ -63,6 +63,7 @@ serviceWorker.unregister();
 ## Redux sub library
 
 - redux-actions
+- immutable
 - immer
 
 ### redux-actions
@@ -169,7 +170,7 @@ handleActions을 사용하면 더이상 switch/case문을 사용할 필요 없�
 
 CREATE, ENTER, LEAVE의 액션 경우엔 배열을 다뤄야 하는 것들이라, concat, map, filter를 사용하여 불변성을 유지하면서 배열에 새로운 값을 지정해줌.
 
-### Immer
+### Immutable
 
 불변성을 유지해줘야 하는 객체의 값을 더 쉽게 업데이트 할 수 있게 해줌.
 
@@ -184,6 +185,47 @@ yarn add immutable
 Immutable 을 사용하면 업데이트를 하게 될 때 위와 같이 내장 함수들을 활용하여 간단하게 할 수 있는 대신에,
 
 값이 일반 객체가 아니기 때문에 상태에서 값을 조회하고 싶을 때 counter.color 이런식으로는 값을 조회하지 못하고 counter.get('color') 해야함.
+
+### Immer
+
+편리한 불변성 유지 라이브러리
+
+#### Install
+
+```
+yarn add immer
+```
+
+#### Example
+
+불변성에 대해 신경쓰지 않는 것 처럼 데이터를 업데이트 해주면, 라이브러리가 알아서 불변성 유지를 해주면서 업데이트를 해줌
+
+```javascript
+import produce from 'immer';
+
+const baseState = [
+     {
+    todo: 'Learn typescript',
+    done: true,
+  },
+  {
+    todo: 'Try immer',
+    done: false,
+  },
+]
+
+const nextState = produce(baseState, draftState = > {
+  draftState.push({ todo: 'Tweet about it' });
+  draftState[1].done = true;
+});
+
+```
+
+### Immutable / Immer
+
+Immutable 은 Map, List 등 자체 인스턴스가 있는 반면
+
+immer 은 JSON 을 업데이트 하는 것을 더 쉽게 해준다.
 
 # 참고 문서
 

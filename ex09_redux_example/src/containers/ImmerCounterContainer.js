@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Counter from '../components/Counter';
-import { increment, decrement } from '../store/modules/immuCounter';
+import { increment, decrement } from '../store/modules/immerCounter';
 
-class ImmuCounterContainer extends Component {
+class ImmerCounterContainer extends Component {
   handleIncrement = () => {
     this.props.increment();
   };
@@ -23,16 +23,11 @@ class ImmuCounterContainer extends Component {
   }
 }
 
-const mapStateToProps = ({ immuCounter }) => ({
-  // **** .get 을 사용해서 값 조회
-  color: immuCounter.get('color'),
-  number: immuCounter.get('number'),
+const mapStateToProps = ({ immerCounter }) => ({
+  color: immerCounter.color,
+  number: immerCounter.number,
 });
 
-// 함수가 아닌 객체 설정시 자동 bindActionCreators 됨
 const mapDispatchToProps = { increment, decrement };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ImmuCounterContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(ImmerCounterContainer);

@@ -17,9 +17,9 @@ class ImmuPaletteContainer extends Component {
 }
 
 // props 로 넣어줄 스토어 상태값
-const mapStateToProps = ({ counter }) => ({
+const mapStateToProps = ({ immuCounter }) => ({
   // **** .get 으로 조회
-  color: counter.get('color'),
+  color: immuCounter.get('color'),
 });
 
 // props 로 넣어줄 액션 생성함수

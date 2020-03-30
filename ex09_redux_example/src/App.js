@@ -7,6 +7,9 @@ import WaitingListContainer from './containers/WaitingListContainer';
 import ImmuPaletteContainer from './containers/ImmuPaletteContainer';
 import ImmuCounterContainer from './containers/ImmuCounterContainer';
 import ImmuWaitingListContainer from './containers/ImmuWaitingListContainer';
+import ImmerPaletteContainer from './containers/ImmerPaletteContainer';
+import ImmerCounterContainer from './containers/ImmerCounterContainer';
+import ImmerWaitingListCountainer from './containers/ImmerWaitingListCountainer';
 
 class App extends Component {
   render() {
@@ -19,6 +22,10 @@ class App extends Component {
         <ImmuPaletteContainer />
         <ImmuCounterContainer />
         <ImmuWaitingListContainer />
+
+        <ImmerPaletteContainer/>
+        <ImmerCounterContainer/>
+        <ImmerWaitingListCountainer/>
       </div>
     );
   }

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as waitingActions from '../store/modules/waiting';
+import * as waitingActions from '../store/modules/immerWaiting';
 import WaitingList from '../components/WaitingList';
 
-class WaitingListContainer extends Component {
+class ImmerWaitingListCountainer extends Component {
   // 인풋 변경 이벤트
   handleChange = e => {
     const { WaitingActions } = this.props;
@@ -43,9 +43,9 @@ class WaitingListContainer extends Component {
   }
 }
 
-const mapStateToProps = ({ waiting }) => ({
-  input: waiting.input,
-  list: waiting.list,
+const mapStateToProps = ({ immerWating }) => ({
+  input: immerWating.input,
+  list: immerWating.list,
 });
 
 // 이런 구조로 하면 나중에 다양한 리덕스 모듈을 적용해야 하는 상황에서 유용합니다.
@@ -57,4 +57,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(WaitingListContainer);
+)(ImmerWaitingListCountainer);

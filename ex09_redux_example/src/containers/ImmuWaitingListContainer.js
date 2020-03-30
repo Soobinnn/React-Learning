@@ -28,6 +28,7 @@ class ImmuWaitingListContainer extends Component {
     WaitingActions.leave(id);
   };
   render() {
+    console.log(this.props);
     const { input, list } = this.props;
     return (
       <ImmuWaitingList
@@ -42,10 +43,10 @@ class ImmuWaitingListContainer extends Component {
   }
 }
 
-const mapStateToProps = ({ waiting }) => ({
+const mapStateToProps = ({ immuWaiting }) => ({
   // **** .get 사용
-  input: waiting.get('input'),
-  list: waiting.get('list'),
+  input: immuWaiting.get('input'),
+  list: immuWaiting.get('list'),
 });
 
 // 이런 구조로 하면 나중에 다양한 리덕스 모듈을 적용해야 하는 상황에서 유용합니다.
