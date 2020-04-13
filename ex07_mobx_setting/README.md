@@ -21,4 +21,27 @@
     // Adds legacy decorator support to the Webpack configuration.
     module.exports = override(addDecoratorsLegacy())
 
-6. yarn start
+6. 
+```
+{
+    "presets": [
+        "@babel/preset-env"
+    ],
+    "plugins": [
+        "@babel/plugin-syntac-dynamic-import",
+        [
+            "@babel/plugin-proposal-decorators",
+            {
+                "legacy":true
+            }
+        ],
+        [
+            "@babel/plugin-proposal-class-properties",
+            {
+                "loose":true
+            }
+        ]
+    ]
+}
+```
+7. yarn start
