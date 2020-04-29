@@ -21,7 +21,7 @@
     // Adds legacy decorator support to the Webpack configuration.
     module.exports = override(addDecoratorsLegacy())
 
-6. 
+6. .babelrc
 ```
 {
     "presets": [
